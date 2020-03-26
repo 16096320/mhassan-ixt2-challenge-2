@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+	margin: 0;
+}
+
+body {
+	color: white;
+	font-family: roboto ultralight;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.monthyear {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.time-con {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75vh;
+}
+
+.circle-svg-ac {
+	transition: 0.35s stroke-dashoffset;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+
+
+.rt-clock {
+	display: flex;
+	font-size: 40px;
+	justify-content: center;
+}
+
+.right-container {
+	text-align: right;
+	padding-right: 15px;
+	border-right: solid 2px white;
+}
+
+.left-container {
+	padding-left: 15px;
+	text-align: left;
+}
+
+.date-text {
+	font-size: 18px;
+	padding-top: 5px;
+}
+
+@media only screen and (max-width: 350px) {
+	.shade {
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.circle-svg {
+		visibility: hidden;
+		position: absolute;
+	}
+
+	#monthyear {
+		background-color: transparent;
+	}
+}
+
+@media only screen and (min-width: 351px) and (max-width: 500px) {
+	.shade {
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		z-index: -1;
+	}
+
+	#monthyear {
+		background-color: transparent;
+	}
+
+	.circle-svg, .clock-box {
+		position: absolute;
+	}
+
+	.circle-svg {
+		width: 220px;
+		height: 220px;
+	}
+
+	.circle-svg-ac {
+		stroke: white;
+		fill: none;
+		stroke-width: 6;
+	}
+
+	.clock-box {
+		box-sizing: border-box;
+		text-align: center;
+		justify-content: center;
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+	.circle-svg, .clock-box {
+		position: absolute;
+	}
+
+	.circle-svg {
+		width: 220px;
+		height: 220px;
+	}
+
+	.circle-svg-ac {
+		stroke: white;
+		fill: none;
+		stroke-width: 6;
+	}
+
+	.clock-box {
+		box-sizing: border-box;
+		height: 190px;
+		width: 190px;
+		text-align: center;
+		justify-content: center;
+		display: inline-block;
+		padding: 50px;
+		border-radius: 50%;
+		background-color: rgba(0, 0, 0, 0.7); 
+	}	
+}
+
+@media only screen and (min-width: 1001px) {
+.circle-svg, .clock-box {
+		position: absolute;
+	}
+
+	.circle-svg {
+		width: 220px;
+		height: 220px;
+	}
+
+	.circle-svg-ac {
+		stroke: white;
+		fill: none;
+		stroke-width: 6;	
+	}
+
+	.clock-box {
+		box-sizing: border-box;
+		height: 190px;
+		width: 190px;
+		text-align: center;
+		justify-content: center;
+		display: inline-block;
+		padding: 50px;
+		border-radius: 50%;
+		background-color: rgba(0, 0, 0, 0.7); 
+	}
+
+	.rt-clock {
+		display: flex;
+		font-size: 40px;
+		justify-content: center;
+		position: relative;
+	}
+
+	.right-container {
+		text-align: right;
+		padding-right: 15px;
+		border-right: solid 2px white;
+	}
+
+	.left-container {
+		padding-left: 15px;
+		text-align: left;
+	}
+
+	.date-text {
+		font-size: 18px;
+		padding-top: 5px;
+	}
+
+	.circle-blur {
+		border: solid 10px;
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		filter: blur(10px);
+		animation: colorChange 10s ease-out infinite;
+		animation-direction: alternate;
+	}
+
+}
+
+@keyframes colorChange {
+	0% {
+		border-color: #ffff66;
+	}
+	50% {
+		border-color: #ff99ff;
+	}
+	100% {
+		border-color: #ffd27f;
+	}
+}
